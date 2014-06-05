@@ -19,6 +19,7 @@ var ImageView = Backbone.View.extend({
 	//Refreshes when there is a change in the model. Renders if there is a change to the container.
 	initialize: function() {
 		$('.container').append(this.el);
+		this.listenTo(this.model, 'change', this.render),
 		//renders immediately without being called.	
 		this.render();
 	},

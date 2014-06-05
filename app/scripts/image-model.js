@@ -6,6 +6,8 @@ var Photo = Backbone.Model.extend({
 //tells backbone that mongo(database) is calling the id something else.
 	idAttribute: "._id",
 
+	
+
 });
 ///END OF MODEL
 

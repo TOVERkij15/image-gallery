@@ -4,21 +4,25 @@ var DetailView = Backbone.View.extend({
 	//bb way of setting up class outside of html.
 	className: 'box',
 
-	/*template: _.template($('.image-gallery-template').text()),*/
+	template: _.template($('.image-gallery-template').text()),
 	editTemplate: _.template($('.image-gallery-edit-template').text()),
 
 	events: {
 		
 		'click': 'toGetPhoto',
-		'click': 'DetailView'
-
-	},
+		'click': 'DetailView',
+		'click': '.save-button',
+		'click .edit-image' : "editImage",
+		
+    },
 
 initialize: function() {
-		$('.container').prepend(this.el);
+		$('.details-container').append(this.el);
+		
 		//renders immediately without being called.	
 		this.render();
 	},
+
 
 //Rendering Templates
 	render: function() {
@@ -26,12 +30,13 @@ initialize: function() {
 		this.$el.html(renderededitTemplate);
 	},
 
-DetailView: function() {
-		new DetailView({
-			model: this.model
-		})
-	},
-	
+
+editImage: function(){
+  var renderTemplate = this.editTemplate(this.model.attributes)
+  this.$el.html(renderTemplate);
+ },
+
+
 
 toGetPhoto: function() {
 var getPhoto = new PhotoCollection();

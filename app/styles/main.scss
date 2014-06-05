@@ -1,0 +1,47 @@
+// bower:scss
+// endbower
+
+body {
+    background: url("http://th02.deviantart.net/fs70/PRE/i/2012/052/8/0/taking_a_break__scrapbook_paper_by_msbarbee-d4qk6s4.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:50px;
+    padding:100px 200px 50px;
+    color: white;
+}
+
+
+.container{
+    display: block;
+}
+.image{
+    display:block;
+    float:right;
+    
+   
+}
+
+.image img {
+    display:block;
+    height:100px;
+    width: 100px;
+    padding:10px;
+
+}
+
+.box {
+    display:inline-block; 
+    float:left;
+}
+
+.box img {
+    height:500px;
+    width: 500px;
+}
+
+
+
+

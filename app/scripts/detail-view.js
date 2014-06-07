@@ -11,49 +11,103 @@ var DetailView = Backbone.View.extend({
 		
 		'click': 'toGetPhoto',
 		'click': 'DetailView',
-		'click': '.save-button',
-		'click .edit-image' : "editImage",
+		'click .save-button': "saveModel",
+		'click .edit-button': "editImage",
+
 		
     },
 
-initialize: function() {
+	initialize: function() {
+	//you would put this here instead of in the render function because you render something this way and it will stay in order.		
+		this.listenTo(this.model, 'change', this.render);
 		$('.details-container').append(this.el);
-		
 		//renders immediately without being called.	
 		this.render();
 	},
 
 
 //Rendering Templates
-	render: function() {
-		var renderededitTemplate = this.editTemplate(this.model.attributes)
-		this.$el.html(renderededitTemplate);
+	
+	render: function(){
+    	var renderedTemplate = this.editTemplate(this.model.attributes)
+    	this.$el.html(renderedTemplate)
+
 	},
 
+	editImage: function(){
+    	var renderedTemplate = this.editTemplate(this.model.attributes)
+    	this.$el.html(renderedTemplate)
 
-editImage: function(){
-  var renderTemplate = this.editTemplate(this.model.attributes)
-  this.$el.html(renderTemplate);
- },
+	},
+})
+
+/*toGetPhoto: function() {
+var getPhoto = new PhotoCollection();
+
+getPhoto.get('url').done(function() {
+new DetailView({model: this.model})
+});
+}
+}*/
 
 
 
-toGetPhoto: function() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*addPhoto: function(){
+
+	var photoInstance= new Photo();
+
+	this.model=photoInstance
+	photos.add(this.model)
+	this.$el.find('input').val('');
+	this.$el.find('img').attr('');
+
+});*/
+
+
+/*editImage: function(){
+  
+  var renderededitTemplate = this.editTemplate(this.model.attributes)
+  this.$el.html(renderededitTemplate);
+ },*/
+
+
+//.el: types 
+//put the remove button in from the remove on annotated source in bb.js
+//has changed is a good example for the input
+
+
+//instances
+ 
+
+
+/*toGetPhoto: function() {
 var getPhoto = new PhotoCollection();
 
 getPhoto.get('url').done(function() {
 new DetailView({model: this.model})
 })
-},
+}*/
 
 
 
-
-
-});
-
-//instances
- 
 
 
 

@@ -21,24 +21,28 @@
         <![endif]-->
 
         <div class="header"> Photo-Press</div>
-        <div class="details-container"></div>
-        <div class= "container"></div>
+        <div class="details-container">
+        </div>
+        <div class= "image-container"></div>
         
         <!--image-view-->
         <script type= "text/template" class= "image-gallery-template">
         <img src="<%= url %>">
-
         </script>
 
         <!--detail-view-->
         <script type= "text/template" class= "image-gallery-edit-template">
-            <div class ="image-container">
-                <img src= "url">
+            <div class ="details-container">
+                <input class= "value" type="text" value= "<%= url %>">
+                <input class= "captionInput" type="text" value= "<%= caption ? caption: 'No Caption' %>"> 
+            <img src= "<%= url %>"> 
+            <div class= "save-button button"> Save</div>
+            <div class= "edit-button button"> Edit</div>
+            <div class= "status"></div>
             </div>
-            <input class= "value" type="text" value= "<%= url %>">
-            <input class= "captionvalue" type="text" value= "<%= caption %>">
-            <button class= "save-button button"> Save</button>
+
         </script>
+            
 
         
 
@@ -70,6 +74,7 @@
         <script src="scripts/image-model.js"></script>
         <script src="scripts/image-view.js"></script>
         <script src="scripts/detail-view.js"></script>
+        <script src="scripts/main.js"></script>
         
         
 

@@ -32,33 +32,16 @@ var ImageView = Backbone.View.extend({
 		this.$el.html(renderedTemplate);
 	},
 
-
 	showDetailView: function(){
     	console.log('should render a new DetailView')
     	detailView.remove();
+
     	detailView = new DetailView({model: this.model})
-  }
+  	}
 
 ///this is saying I have a model and I am giving it to you.	
-	/*showDetailView: function() {
 	//removing that instance	
-		showDetailView.remove();
-		 showDetailView = new DetailView({model: this.model})
-	},*/
-
-//console.log
-	//photos=new Photos({url:})
-	//coll=newPhotosCollection
-	//coll.add(photos)
-
 });
-//instances
-var funnyImages = new PhotoCollection();
 
-funnyImages.fetch().done(function() {
-	funnyImages.each(function(images) {
-		new ImageView({
-			model: images
-		});
-	})
-});
+
+

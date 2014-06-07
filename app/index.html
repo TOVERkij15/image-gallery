@@ -20,10 +20,9 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="header"> Photo-Press</div>
-        <div class="details-container">
-        </div>
-        <div class= "image-container"></div>
+        <div class="header"> Photo-Press </div>
+        <div class="container"> </div>
+        <div class= "image-container"> </div>
         
         <!--image-view-->
         <script type= "text/template" class= "image-gallery-template">
@@ -32,27 +31,18 @@
 
         <!--detail-view-->
         <script type= "text/template" class= "image-gallery-edit-template">
-            <div class ="details-container">
+            <div class ="container">
                 <input class= "value" type="text" value= "<%= url %>">
                 <input class= "captionInput" type="text" value= "<%= caption ? caption: 'No Caption' %>"> 
-            <img src= "<%= url %>"> 
-            <div class= "save-button button"> Save</div>
-            <div class= "edit-button button"> Edit</div>
-            <div class= "status"></div>
+                <img src= "<%= url %>"> 
+                <div class= "save-button button"> Save</div>
+                <div class= "edit-button button"> Edit</div>
+                <div class= "status"></div>
             </div>
 
         </script>
             
-
-        
-
-       
-
-
-        
-
-
-        <!-- build:js scripts/vendor.js -->
+    <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/underscore/underscore.js"></script>

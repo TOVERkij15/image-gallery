@@ -4,7 +4,7 @@
 //extend correctly sets up the prototype chain, so subclasses created with extend can be further extended and subclassed as far as you like.
 var Photo = Backbone.Model.extend({
 //tells backbone that mongo(database) is calling the id something else. All the instance specific data.
-	idAttribute: "._id",
+	idAttribute: "_.id",
 
 	defaults: {
 		caption: "",

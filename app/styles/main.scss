@@ -17,9 +17,10 @@ body {
 
 .image-container {
     height: 600px;
-    width: 600px;
+    width: 400px;
     border: 60px solid teal;
     overflow: scroll;
+    float:left;
 
     .image {
         float: left;
@@ -35,18 +36,19 @@ body {
 }
 
 .container img {
-    display: inline-block;
-    width: 300px;
-    height: 300px;
+    display:block;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
     background-color: teal;
-    float: left;
-    padding:10px 10px 10px 20px;
+    margin:40px;
+    float: center;
+    padding:50px 50px 50px 50px;
     font:20px;
 }
 
  .button {
-    display: inline-block;
+    display:block;
     width:300px;
     height:50px;
     background-color:black;
@@ -59,7 +61,7 @@ body {
 
 .details-container{
     width:400px;
-    height:700px;
+    height:600px;
     overflow: hidden;
     background-color: teal;
     float: left;

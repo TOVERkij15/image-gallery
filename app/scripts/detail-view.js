@@ -31,6 +31,11 @@ var DetailView = Backbone.View.extend({
 
 	},
 
+	editImage: function() {
+		var renderTemplate = this.editTemplate(this.model.attributes)
+    	this.$el.html(renderTemplate);
+  	},
+
 	saveModel: function() {
 		this.model.set({
 			url: this.$el.find('.value').val(),
@@ -39,7 +44,7 @@ var DetailView = Backbone.View.extend({
 		photos.add(this.model);
 
 		this.model.save().done(function() {
-			this.$el.find('.status').html('BLAH!')
+			this.$el.find('.status').html('BLAH!');
 		});
 	},
 

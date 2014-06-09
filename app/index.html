@@ -26,12 +26,12 @@
         
         <!--image-view-->
         <script type= "text/template" class= "image-gallery-template">
-        <img src="<%= url %>">
+                <img src="<%= url %>">
         </script>
 
         <!--detail-view-->
         <script type= "text/template" class= "image-gallery-edit-template">
-            <div class ="container">
+            <div class ="image-container">
                 <input class= "value" type="text" value= "<%= url %>">
                 <input class= "captionInput" type="text" value= "<%= caption ? caption: 'No Caption' %>"> 
                 <img src= "<%= url %>"> 

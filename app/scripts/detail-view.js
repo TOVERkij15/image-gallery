@@ -42,9 +42,10 @@ var DetailView = Backbone.View.extend({
 		});
 
 		photos.add(this.model);
+		var that = this;
 
 		this.model.save().done(function() {
-			this.$el.find('.status').html('BLAH!');
+			that.$el.find('.status').html('BLAH!');
 		});
 	},
 

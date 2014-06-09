@@ -10,9 +10,6 @@ var Photo = Backbone.Model.extend({
 		caption: "",
 		url: ""
 	},
-
-
-
 });
 ///END OF MODEL
 
@@ -24,7 +21,6 @@ var PhotoCollection = Backbone.Collection.extend({
 	model: Photo,
 //The url links to the server. Backbone assumes you are going to get an array of objects back.
   url: 'http://tiny-pizza-server.herokuapp.com/collections/photos',
-
 
 });
 ///END OF COLLECTION

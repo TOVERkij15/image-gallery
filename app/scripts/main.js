@@ -1,8 +1,13 @@
-"use strict";
+'use strict';
 //With these instances, we are *using* the constructor.
 var photos = new PhotoCollection();
 var detailView;
-	
+
+var App = new AppRouter();
+
+Backbone.history.start();
+
+
 photos.fetch().done(function(){
 	photos.each(function(photo){
 //model: tells this what it was.
@@ -14,6 +19,21 @@ photos.fetch().done(function(){
 
  	 detailView = new DetailView({ model: photos.first()})
 });
+
+	
+
+
+
+
+	
+
+	
+
+	
+
+
+
+	
 
 
 

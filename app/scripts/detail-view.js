@@ -1,4 +1,4 @@
-'use-strict';
+'use strict';
 
 var DetailView = Backbone.View.extend({
 	//bb way of setting up class outside of html.
@@ -6,13 +6,12 @@ var DetailView = Backbone.View.extend({
 
 	//template: _.template($('.image-gallery-template').text()),
 	editTemplate: _.template($('.image-gallery-edit-template').text()),
-
+	
 	events: {
 		
 		'click': 'toGetPhoto',
-		'click': 'DetailView',
 		'click .save-button': "saveModel",
-		'click .edit-button': "editImage",
+		'click .edit-button': "editImage"
 	},
 
 	initialize: function() {
@@ -25,33 +24,41 @@ var DetailView = Backbone.View.extend({
 	},
 //Rendering Templates
 	
+	
 	render: function(){
-    	var renderedTemplate = this.editTemplate(this.model.attributes)
-    	this.$el.html(renderedTemplate)
-
+    	var renderedTemplate = this.editTemplate(this.model.attributes)
+    	this.$el.html(renderedTemplate);
+	
 	},
 
 	editImage: function() {
-		var renderTemplate = this.editTemplate(this.model.attributes)
-    	this.$el.html(renderTemplate);
+		var renderedTemplate = this.editTemplate(this.model.attributes)
+    	this.$el.html(renderedTemplate);
   	},
 
 	saveModel: function() {
-		this.model.set({
-			url: this.$el.find('.value').val(),
-		});
 
-		photos.add(this.model);
+		this.model.set({
+		url: this.$el.find('.value').val(),
+		caption: this.$el.find('.captionInput').val()
+	});
+
+	photos.add(this.model)
 		var that = this;
 
 		this.model.save().done(function() {
-			that.$el.find('.status').html('BLAH!');
+		that.$el.find('.status').html('BLAH!');
+		
 		});
-	},
-
+	}
 });
 
 
+
+
+
+
+	
 
 
 

@@ -20,12 +20,18 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-            <div class="header"> Photo-Press
-                <div class= "photos">
-                    <a href="#">Home</a>
-                    <a href="#photos">Images</a>
+            
+            <nav>
+                <ul>
+                <div class="header"> Photo-Press
+                <ul class= "photos">
+                <li><a href="/#photos">Photos</a></li>
+                </ul>
+                <li><a href="/#">Home</a></li>
                 </div>
-            </div>
+                </ul>
+            </nav>
+            
 
             <div class="container"> </div>  
             <div class= "image-container"> </div>
@@ -33,7 +39,7 @@
         <!--image-view-->
         <script type= "text/template" class= "image-gallery-template">
             <div>
-                <a href="/#photos/<%= _id %>"><img src="<%= url %>"> 
+                <a href="/#photo/<%= _id %>"><img src="<%= url %>"> 
             <div class="image-caption"> <%= caption ? caption: 'no caption' %> </div>
                 </a>
             </div>

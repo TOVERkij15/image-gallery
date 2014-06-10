@@ -16,7 +16,11 @@ photos.fetch().done(function(){
 
 //first detail out of that instance and set it to the model.
 
- 	 detailView = new DetailView({ model: photos.first()})
+
+ //var detailView = new DetailView({ model: photos.first()})
+
+
+
 });
 
 	

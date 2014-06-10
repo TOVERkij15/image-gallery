@@ -2,7 +2,7 @@
 
 var DetailView = Backbone.View.extend({
 	//bb way of setting up class outside of html.
-	className: 'box',
+	
 
 	//template: _.template($('.image-gallery-template').text()),
 	editTemplate: _.template($('.image-gallery-edit-template').text()),
@@ -23,6 +23,7 @@ var DetailView = Backbone.View.extend({
 		this.render();
 	},
 //Rendering Templates
+	
 	
 	
 	render: function(){
@@ -52,6 +53,7 @@ var DetailView = Backbone.View.extend({
 		});
 	}
 });
+
 
 
 

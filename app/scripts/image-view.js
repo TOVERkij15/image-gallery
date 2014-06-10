@@ -12,10 +12,10 @@ var ImageView = Backbone.View.extend({
 
 
 	//defaults to this.el. selector not shown.
-	/*events: {
+	events: {
 		'click': 'showDetailView'
 
-	},*/
+	},
 
 	//Methods//
 	//Refreshes when there is a change in the model. Renders if there is a change to the container.
@@ -32,12 +32,12 @@ var ImageView = Backbone.View.extend({
 		this.$el.html(renderedTemplate);
 	},
 
-	showDetailView: function(){
+	/*showDetailView: function(){
     	console.log('should render a new DetailView')
     	detailView.remove();
 
     	detailView = new DetailView({model: this.model})
-  	}
+  	}*/
 
 ///this is saying I have a model and I am giving it to you.	
 	//removing that instance	

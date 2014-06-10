@@ -6,11 +6,22 @@ var AppRouter = Backbone.Router.extend({
 
 		""       			:"renderHome",
 		"photos"  			:"renderPhotos",
-		"photos/:images"	:"renderPhoto"
+		"photo/:id"	:"renderPhoto"
 	},
 
 	initialize: function(){
 		console.log('router was created')
+},
+
+
+	
+	renderPhoto: function(id) {
+		console.log('test5')
+		// photos.get(id);
+		console.log(id);
+		// detailInstance.remove()
+		detailInstance = new DetailView({model: photos.get(id)})
+	
 	},
 
 	renderHome: function(){
@@ -19,17 +30,10 @@ var AppRouter = Backbone.Router.extend({
 		$('.container').html("Return Home");
 	},
 
-	renderPhotos: function(images){
+	renderPhotos: function(){
 		console.log('test2')
 
 		$('.container').html("Click on any image");
 	},
-
-	renderPhoto: function(){
-		console.log('test3')
-
-		$('.container').html();
-	},
-
 
 });

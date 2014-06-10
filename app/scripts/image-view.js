@@ -12,10 +12,10 @@ var ImageView = Backbone.View.extend({
 
 
 	//defaults to this.el. selector not shown.
-	events: {
+	/*events: {
 		'click': 'showDetailView'
 
-	},
+	},*/
 
 	//Methods//
 	//Refreshes when there is a change in the model. Renders if there is a change to the container.

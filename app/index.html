@@ -26,14 +26,20 @@
                     <a href="#photos">Images</a>
                 </div>
             </div>
-            
+
             <div class="container"> </div>  
             <div class= "image-container"> </div>
         
         <!--image-view-->
         <script type= "text/template" class= "image-gallery-template">
-                <img src="<%= url %>">
-        </script>
+            <div>
+                <a href="/#photos/<%= _id %>"><img src="<%= url %>"> 
+            <div class="image-caption"> <%= caption ? caption: 'no caption' %> </div>
+                </a>
+            </div>
+        </script>
+
+     
 
         <!--detail-view-->
         <script type= "text/template" class= "image-gallery-edit-template">

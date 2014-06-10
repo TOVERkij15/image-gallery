@@ -2,7 +2,6 @@
 //With these instances, we are *using* the constructor.
 var photos = new PhotoCollection();
 var detailView;
-
 var App = new AppRouter();
 
 Backbone.history.start();

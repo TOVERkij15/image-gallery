@@ -3,6 +3,11 @@
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: url(http://3.bp.blogspot.com/_kwZVnO9cmMY/Rp8hl_pW7GI/AAAAAAAAF04/vLkyEzXtI90/s400/sr850_ashville_kraft_branch_copy.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
     font-size:20px;
     margin-top: 10px;
     /*padding:10px 10px 10px 50px;*/
@@ -13,9 +18,9 @@ body {
 
 .image-container {
     display:block;
-    height: 600px;
-    width: 600px;
-    border: 10px solid grey;
+    max-height: 600px;
+    width: 500px;
+    border: 10px solid tan;
     overflow: scroll;
     float:left;
     font-size: 20px;
@@ -34,8 +39,9 @@ body {
 }
 
 .header{
-    font-size: 20px;
-    /*background-color:grey;*/
+    color:black;
+    font-size: 40px;
+    display:inline-block;
     margin:0px;
 
 
@@ -47,9 +53,8 @@ body {
     width: 300px;
     height: 200px;
     overflow: hidden;
-    background-color: grey;
+    background-color: tan;
     margin:10px;
-    
     font:20px;
 }
 
@@ -57,8 +62,8 @@ body {
 
     width:300px;
     height:50px;
-    background-color:grey;
-    border: 10px solid white;
+    background-color:tan;
+    border: 10px solid tan;
     text-align:center;
     font-size: 20px;
     font-color:white;
@@ -67,11 +72,12 @@ body {
 
 .details-container{
     width:400px;
-    height:600px;
+    max-height:600px;
     overflow: hidden;
-    background-color: grey;
+    background-color: tan;
     float: left;
-    padding:10px 10px 10px 20px;
+    margin-right:20px;
+    padding:20px 10px 20px 20px;
     font:20px;
     
     img {
@@ -86,13 +92,13 @@ body {
     width: 500px;
     height:30px;
     margin-left: 30px;
-    border: 10px solid grey;
+    border: 10px solid tan;
 }
 .captionInput{
     width: 500px;
     height:30px;
     margin-left: 30px;
-    border: 10px solid grey;
+    border: 10px solid tan;
 }
 
 
